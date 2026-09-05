@@ -3,19 +3,14 @@
 #include "Screen.h"
 
 
-Screen screen = Screen(800, 800, "sdl2 test window", SDL_WINDOW_SHOWN, SDL_RENDERER_ACCELERATED);
-
 int main(int argc, char* argv[]) {
 
-    screen.setBackgroundColor(150, 150, 220, 255);
 
-    while (true) {
+    Screen screen = Screen(800, 800, "sdl2 test window", SDL_WINDOW_SHOWN, SDL_RENDERER_ACCELERATED);
+    screen.setBackgroundColor(200, 200, 210, 255);
 
-        if (!screen.isRunning) {
-            break;
-        }
+    while (screen.isRunning) {
         screen.Update();
-
     }
 
 

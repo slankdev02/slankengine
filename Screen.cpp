@@ -1,9 +1,11 @@
 #include "Screen.h"
 
 
-//this also creates the Window and Renderer objects with the given args
-Screen::Screen(int width, int height, std::string title, Uint32 window_flags, Uint32 renderer_flags) : width(width), height(height), title(title), 
-    window(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, window_flags)),
+Screen::Screen(int width, int height, std::string title, Uint32 window_flags, Uint32 renderer_flags) : 
+    width(width), 
+    height(height), 
+    title(title), 
+    window(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, window_flags)), 
     renderer(SDL_CreateRenderer(window, -1, renderer_flags)) {}
 
 
@@ -20,6 +22,13 @@ void Screen::Update() {
         SDL_RenderClear(renderer);
         SDL_RenderPresent(renderer);
     }
+}
+
+
+void Screen::Destroy() {
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
 }
 
 
