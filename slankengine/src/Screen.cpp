@@ -1,4 +1,6 @@
+#include <SDL2/SDL.h>
 #include "Screen.h"
+
 
 
 Screen::Screen(int width, int height, std::string title, Uint32 window_flags, Uint32 renderer_flags) : 
@@ -19,6 +21,7 @@ void Screen::Update() {
         }
         
         //both needed for rendering refresh
+        SDL_SetRenderDrawColor(renderer, backgroundColor.red, backgroundColor.green, backgroundColor.blue, backgroundColor.alpha);
         SDL_RenderClear(renderer);
         SDL_RenderPresent(renderer);
     }
@@ -32,6 +35,6 @@ void Screen::Destroy() {
 }
 
 
-void Screen::setBackgroundColor(int red, int green, int blue, int alpha) {
-    SDL_SetRenderDrawColor(renderer, red, green, blue, alpha);
+void Screen::setBackgroundColor(RGBA color) {
+    backgroundColor = color;
 }

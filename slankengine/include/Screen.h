@@ -15,6 +15,7 @@ public:
     const int height;
     std::string title;
     bool isRunning = true;
+    RGBA backgroundColor;
 
     SDL_Window* window;
     SDL_Renderer* renderer;
@@ -22,5 +23,5 @@ public:
     Screen(int width, int height, std::string title, Uint32 window_flags, Uint32 renderer_flags);
     void Update();
     void Destroy();
-    void setBackgroundColor(int red, int green, int blue, int alpha);
+    void setBackgroundColor(RGBA color);
 };
