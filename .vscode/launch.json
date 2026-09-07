@@ -5,7 +5,11 @@
       "name": "Debug SDL2",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "program": "${workspaceFolder}/build/slankgame",
+      "windows": {
+        "program": "${workspaceFolder}/build/slankgame.exe",
+        "MIMode": "gdb"
+      },
       "cwd": "${workspaceFolder}",
       "preLaunchTask": "build",
       "MIMode": "lldb"

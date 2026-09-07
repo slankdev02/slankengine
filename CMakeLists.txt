@@ -1,21 +1,17 @@
 cmake_minimum_required(VERSION 3.15)
-project(MyGameWorkspace)
+project(MyGameWorkspace LANGUAGES CXX)
 
-include(FetchContent)
-
-# Use the cleaner, modern combined declaration format
-FetchContent_Declare(
-    SDL2
-    GIT_REPOSITORY "https://github.com/libsdl-org/SDL.git"
-    GIT_TAG        "release-2.30.0"
-)
-
-# Prevent SDL2 from building tests to keep compile times fast
-set(SDL_TESTS OFF CACHE BOOL "" FORCE)
-set(SDL_EXAMPLES OFF CACHE BOOL "" FORCE)
-
-# Download and make it available
-FetchContent_MakeAvailable(SDL2)
+option(SLANKENGINE_BUILD_DEMO "Build the slankengine demo application" ON)
+option(SLANKENGINE_BUILD_SANDBOX "Build the sandbox application" ON)
 
 add_subdirectory(slankengine)
-add_subdirectory(sandbox)
+
+if(SLANKENGINE_BUILD_DEMO)
+	add_executable(slankgame main.cpp)
+	target_include_directories(slankgame PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+	target_link_libraries(slankgame PRIVATE slankengine::slankengine)
+endif()
+
+if(SLANKENGINE_BUILD_SANDBOX)
+	add_subdirectory(sandbox)
+endif()

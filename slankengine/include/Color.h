@@ -1,4 +1,6 @@
 
+#pragma once
+
 struct RGBA {
     int red;
     int blue;
