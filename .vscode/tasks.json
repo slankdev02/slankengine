@@ -57,9 +57,9 @@
         {
             "label": "run",
             "type": "shell",
-            "command": "${workspaceFolder}/build/slankgame",
+            "command": "${workspaceFolder}/build/sandbox/sandbox",
             "windows": {
-                "command": "${workspaceFolder}/build/slankgame.exe"
+                "command": "${workspaceFolder}/build/sandbox/sandbox.exe"
             },
             "dependsOn": [
                 "build"

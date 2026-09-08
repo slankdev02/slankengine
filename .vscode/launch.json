@@ -5,10 +5,11 @@
       "name": "Debug SDL2",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/build/slankgame",
+      "program": "${workspaceFolder}/build/sandbox/sandbox",
       "windows": {
-        "program": "${workspaceFolder}/build/slankgame.exe",
-        "MIMode": "gdb"
+        "program": "${workspaceFolder}/build/sandbox/sandbox.exe",
+        "MIMode": "gdb",
+        "MIDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe"
       },
       "cwd": "${workspaceFolder}",
       "preLaunchTask": "build",

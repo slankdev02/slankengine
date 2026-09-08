@@ -14,9 +14,6 @@ target_include_directories(slankengine
         ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
-if(WIN32 AND TARGET SDL2::SDL2main)
-    target_link_libraries(slankengine PUBLIC SDL2::SDL2main)
-endif()
 target_link_libraries(slankengine PUBLIC SDL2::SDL2)
 target_compile_features(slankengine PUBLIC cxx_std_17)
 
