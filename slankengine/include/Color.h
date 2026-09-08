@@ -3,7 +3,7 @@
 
 struct RGBA {
     int red;
-    int blue;
     int green;
+    int blue;
     int alpha;
 };

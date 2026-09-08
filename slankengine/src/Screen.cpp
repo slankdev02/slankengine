@@ -3,7 +3,7 @@
 
 
 
-Screen::Screen(int width, int height, std::string title, Uint32 window_flags, Uint32 renderer_flags) : 
+Screen::Screen(int width, int height, std::string title, Uint32 window_flags, Uint32 renderer_flags): 
     width(width), 
     height(height), 
     title(title), 
