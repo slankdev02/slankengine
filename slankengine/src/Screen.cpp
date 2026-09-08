@@ -1,5 +1,5 @@
-#include <SDL2/SDL.h>
-#include "Screen.h"
+#include <SDL3/SDL.h>
+#include "screen.h"
 
 
 
@@ -7,8 +7,8 @@ Screen::Screen(int width, int height, std::string title, Uint32 window_flags, Ui
     width(width), 
     height(height), 
     title(title), 
-    window(SDL_CreateWindow(title.c_str(), SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, window_flags)), 
-    renderer(SDL_CreateRenderer(window, -1, renderer_flags)) {}
+    window(SDL_CreateWindow(title.c_str(), width, height, window_flags)), 
+    renderer(SDL_CreateRenderer(window, nullptr)) {}
 
 
 void Screen::Update() {
@@ -16,7 +16,7 @@ void Screen::Update() {
     SDL_Event event;
     while (SDL_PollEvent(&event)) {
         
-        if (event.type == SDL_QUIT) {
+        if (event.type == SDL_EVENT_QUIT) {
             isRunning = false;
         }
         

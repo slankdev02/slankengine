@@ -9,7 +9,7 @@
       "windows": {
         "program": "${workspaceFolder}/build/sandbox/sandbox.exe",
         "MIMode": "gdb",
-        "MIDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe"
+        "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe"
       },
       "cwd": "${workspaceFolder}",
       "preLaunchTask": "build",

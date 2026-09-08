@@ -1,9 +1,9 @@
 #pragma once
 
-#include <SDL2/SDL.h>
+#include <SDL3/SDL.h>
 #include <string>
 
-#include "Color.h"
+#include "color.h"
 
 /**
  * @class Screen
@@ -11,6 +11,7 @@
  */
 class Screen {
 public:
+
     const int width;
     const int height;
     std::string title;
@@ -20,8 +21,8 @@ public:
     SDL_Window* window = nullptr;
     SDL_Renderer* renderer = nullptr;
 
-    Screen(int width, int height, std::string title, Uint32 window_flags = SDL_WINDOW_SHOWN, Uint32 renderer_flags = SDL_RENDERER_ACCELERATED);
+    Screen(int width, int height, std::string title, Uint32 window_flags = 0, Uint32 renderer_flags = 0);
     void Update();
     void Destroy();
-    void setBackgroundColor(RGBA color = {255, 255, 255, 255});
+    void setBackgroundColor(RGBA color);
 };;

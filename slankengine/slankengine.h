@@ -1,5 +1,5 @@
 #pragma once
 
-#include "include/Color.h"
-#include "include/Screen.h"
+#include "include/color.h"
+#include "include/screen.h"
 #include "include/core.h"
