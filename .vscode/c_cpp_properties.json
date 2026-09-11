@@ -2,9 +2,12 @@
     "configurations": [
         {
             "name": "Mac",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/opt/homebrew/opt/sdl2/include"
+                "${workspaceFolder}/slankengine",
+                "${workspaceFolder}/slankengine/include",
+                "/opt/homebrew/include"
             ],
             "compilerPath": "/usr/bin/clang++",
             "cStandard": "c17",

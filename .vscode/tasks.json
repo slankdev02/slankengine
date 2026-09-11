@@ -30,7 +30,7 @@
                     "${workspaceFolder}/build",
                     "-S",
                     "${workspaceFolder}",
-                    "-DCMAKE_PREFIX_PATH=/opt/homebrew/opt/sdl2"
+                    "-DCMAKE_PREFIX_PATH=/opt/homebrew/Cellar/sdl3"
                 ]
             },
             "problemMatcher": [
