@@ -3,12 +3,9 @@
 #include <SDL3/SDL.h>
 #include <string>
 
-#include "core/color.h"
+#include "general/color.h"
 
-/**
- * @class Screen
- * @brief Handles all window, rendering, and update functionality for a game.
- */
+
 class Screen {
 public:
 

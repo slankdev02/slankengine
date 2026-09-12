@@ -6,7 +6,6 @@ find_package(SDL3_image CONFIG REQUIRED)
 
 add_library(slankengine
     src/core.cpp
-    src/core/texture.cpp
     src/rendering/screen.cpp
 )
 
