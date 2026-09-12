@@ -1,7 +1,5 @@
 #include <SDL3/SDL.h>
-#include "screen.h"
-
-
+#include "rendering/screen.h"
 
 Screen::Screen(int width, int height, std::string title, Uint32 window_flags, Uint32 renderer_flags): 
     width(width), 

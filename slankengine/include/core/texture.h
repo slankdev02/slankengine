@@ -5,16 +5,14 @@
 class Texture {
 
 public:
-    SDL_Texture* image;
 
     void setImage(std::string src);
     Texture();
     ~Texture();
 
 private:
+    SDL_Texture* image;
 
-    void destroyImage() {
-        SDL_DestroyTexture(image);
-    }
-
+    void destroyImage();
+    
 };

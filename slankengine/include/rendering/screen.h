@@ -3,7 +3,7 @@
 #include <SDL3/SDL.h>
 #include <string>
 
-#include "color.h"
+#include "core/color.h"
 
 /**
  * @class Screen
@@ -25,4 +25,4 @@ public:
     void Update();
     void Destroy();
     void setBackgroundColor(RGBA color);
-};;
+};

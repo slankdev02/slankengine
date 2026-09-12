@@ -1,7 +1,9 @@
 #include <SDL3/SDL.h>
-#include <SDL3_image/SDL_image.h>
-#include "core.h"
 #include <iostream>
+#include "core.h"
+#include "core/color.h"
+#include "core/texture.h"
+#include "core/slankengine_math.h"
 
 
 bool engine::init(Uint32 engineFlags) {
